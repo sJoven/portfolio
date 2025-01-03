@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="header-img" src="assets/images/eSign-white.png" alt="eSign">
+            <span class="header-text">Joven Christian D. Santos</span>
+        </div>
+        <img class="header-img" id="menu-btn" onclick="openHiddenMenu()" src="assets/images/menu-white.png" alt="menu">
+        <img class="header-img" id="menu-close-btn" onclick="closeHiddenMenu()" src="assets/images/close.png" alt="menu">
+    </div>
+    <div class="hero" id="heroDest">
+        <div class="heroText">
+            Passionate About Creating Web and Mobile Design
+            <br>
+            Ready to Learn and Grow.
+        </div>
+        <button id="cta" onclick="intoCta()">
+            See My Work
+            <img src="assets/images/down-arrow.png" alt="down arrow">
+        </button>
+    </div>
+    <div class="about" id="aboutDest">
+        <div class="aboutTitle title">
+            About Me
+        </div>
+        <div class="aboutText">
+            <p>Hello! I’m Joven Christian D. Santos, a fourth-year Bachelor of Science in Information Technology student at Laguna State Polytechnic University. I’m passionate about technology and eager to bring my skills in web and mobile application development to life. I have hands-on experience in HTML5, CSS3, JavaScript, PHP, and MySQL, and I’ve deployed and maintained web applications using platforms such as Heroku and Netlify.</p><br>
+            <p>I am highly motivated to continuously expand my technical knowledge while applying my problem-solving skills, adaptability, and collaborative mindset in real-world projects. Throughout my academic journey, I’ve developed a strong foundation in development practices, which I’m excited to further hone in professional settings.</p><br>
+            <p>With a genuine enthusiasm for learning and a proactive approach to challenges, I’m ready to contribute and make an impact in the field of technology. Let’s connect and build something amazing together!</p><br>
+        </div>
+        <button class="resume" onclick="openResume()">See my resume here</button>
+    </div>
+    <div class="portfolio" id="ctaDest">
+        <div class="portfolioTitle title">
+            My Works
+        </div>
+        <div class="projects">
+            There are currently no other projects.
+        </div>
+    </div>
+    <div class="footer" id="contactDest">
+        <div class="footerTitle">
+            Contact Me
+        </div>
+        <div class="footerText">
+            <div class="footerCard">
+                <img src="assets/images/email.png" alt="email-icon">
+                sjovencd@gmail.com
+            </div>
+            <div class="footerCard">
+                <img src="assets/images/telephone.png" alt="phone-icon">
+                0929 343 0291
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu-nav" id="hidden-menu">
+            <button onclick="intoHome()">Home</button>
+            <button onclick="intoAbout()">About Me</button>
+            <button onclick="intoCta()">Portfolio</button>
+            <button onclick="intoContact()">Contact Me</button>
+        </div>
+    </div>
+    <div class="resumePdf" id="resume-pdf">
+        <button class="closeResume" onclick="closeResume()"></button>
+        <iframe class="resumeMain" src="assets/others/Joven_Santos_Resume.pdf"></iframe>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
