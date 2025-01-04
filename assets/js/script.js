@@ -7,6 +7,10 @@ const heroDest = document.getElementById('heroDest');
 const aboutDest = document.getElementById('aboutDest');
 const contactDest = document.getElementById('contactDest');
 
+function openNewTab(url) {
+    window.open(url, '_blank');
+}
+
 function openResume(){
     resumePdf.style.display = 'block';
 }
