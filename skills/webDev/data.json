@@ -1,0 +1,30 @@
+[
+  {
+    "name": "HTML",
+    "photo": "skill-icon/html.png"
+  },
+  {
+    "name": "CSS",
+    "photo": "skill-icon/css.jpg"
+  },
+  {
+    "name": "JavaScript",
+    "photo": "skill-icon/js.jpg"
+  },
+  {
+    "name": "PHP",
+    "photo": "skill-icon/php.png"
+  },
+  {
+    "name": "MySQL",
+    "photo": "skill-icon/mysql.png"
+  },
+  {
+    "name": "Python",
+    "photo": "skill-icon/python.png"
+  },
+  {
+    "name": "Figma",
+    "photo": "skill-icon/figma.png"
+  }
+]

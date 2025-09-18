@@ -1,0 +1,42 @@
+[
+  {
+    "view": "000",
+    "title": "Sample (no data)",
+    "photoMain": "none",
+    "photoAll": [
+    "none",
+    "none",
+    "none",
+    "none"
+  ],
+    "features": [
+      "-",
+      "-",
+      "-"
+    ],
+    "tools": ["-", "-", "-"],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt adipisci dolorum accusantium praesentium a doloremque velit, similique temporibus rerum magnam nulla. Quo distinctio ullam odit exercitationem ipsa voluptates qui accusantium.",
+    "live": "../"
+  },
+  {
+    "view": "001",
+    "title": "Portfolio",
+    "photoMain": "001/main.png",
+    "photoAll": [
+      "001/main.png",
+      "001/1.png",
+      "001/2.png",
+      "001/3.png",
+      "001/4.png",
+      "001/5.png"
+    ],
+    "features": [
+      "Modern Aesthetic",
+      "Intuitive Navigation",
+      "Fast Loading Speed"
+    ],
+    "tools": ["HTML", "CSS", "JavaScript", "JSON", "Github (for hosting)"],
+    "description": "This portfolio is a deliberate demonstration of my strong foundation in core web principles. The vanilla JS architecture provides a fast and reliable experience, serving as a base for my explorations into modern frameworks.",
+    "live": "../../"
+  }
+]

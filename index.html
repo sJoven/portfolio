@@ -3,79 +3,445 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/topnav.css">
+    <title>Joven Christian D. Santos</title>
+    <style>
+        #hero {
+            height: 100vh;
+            position: relative; 
+
+            margin-bottom: 8px;
+
+            background-image: url(assets/heroImg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #hero span {
+            color: black;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 36px;
+
+            position: absolute;
+            top: 180px;
+            left: 80px;
+        }
+        #cta {
+            font-size: var(--main-size);
+            padding: .9em 2em;
+            background-color: white;
+            text-decoration: none;
+            border: none;
+            width: 200px;
+            margin: 0 auto;
+            border-bottom: 2px solid white;
+            color: #333;
+            font-weight: 400;
+            font-size: 1em; 
+
+            position: absolute;
+            bottom: 124px;
+            right: 100px;
+        }
+
+        #cta::after {
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: center left;
+            width: 100%;
+            height: 4px;
+            background-color: rgb(0, 127, 255);
+            content: '';
+            transition: transform .3s ease;
+        }
+
+        #cta:hover::after {
+            transform: scaleX(1);
+        }
+
+        #cta:hover {
+            background-color: rgba(0, 0, 0, 0.25);
+            color: white;
+        }
+
+        #profileTop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 24px;
+            margin: 32px 0;
+
+
+        }
+
+        #profileTop span {
+            border-bottom: 3px solid rgb(0, 127, 255);
+        }
+
+        #profileBot p {
+            margin: 0 24px 8px;
+        }
+
+        #webDevSkillTop {
+            margin: 0 24px 24px;
+
+            font-size: 20px;
+
+        }
+
+        #webDevSkillTop span {
+            border-bottom: 2px solid rgb(0, 127, 255);
+        }
+
+        #webDevSkillBot {
+            margin: 0 24px 8px;
+
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+        }
+
+        .skillCard {
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skillCard img {
+            width: 240px;
+            height: 135px;
+            object-fit: contain;
+            object-position: center;
+
+        }
+
+        #webDevProjTop {
+            margin: 0 24px 24px;
+
+            font-size: 20px;
+            
+        }
+
+        #webDevProjTop span {
+            border-bottom: 2px solid rgb(0, 127, 255);
+        }
+
+        #webDevProjBot {
+            margin: 0 24px 8px;
+
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+        }
+        #allProjBtn {
+            margin-top: 32px;
+        }
+        .allProj {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 250px;
+            margin:0 auto;
+            padding: .9em 2em;
+            overflow: hidden;
+            border: 1px solid rgb(0, 127, 255);
+            border-radius: 5px;
+            background-color: #fff;
+            color: rgb(0, 127, 255);
+            font-size: 1em;
+        }
+
+        .allProj:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .allProj::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 0;
+            height: 100%;
+            background-color: rgb(0, 127, 255);
+            content: '';
+            transition: width .3s ease;
+        }
+
+        .allProj:hover::before {
+            width: 100%;
+        }
+
+        .allProj a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .projCard {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgb(54, 69, 79);
+            color: rgb(54, 69, 79);
+            cursor: pointer;
+        }
+
+        .projCard::before {
+            background-color: rgb(54, 69, 79);
+        }
+
+        .projCard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .projCard span {
+            text-decoration: none;
+        }
+
+        .projCard img {
+            width: 240px;
+            height: 135px;
+            object-fit: cover;
+        }
+
+        .footerTitle {
+            margin: 0 24px 4px;
+
+            font-size: 20px;
+        }
+
+        .contactLine {
+            margin: 0 24px 0px;
+
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .contactLine img {
+            height: 24px;
+            width: 24px;
+
+            object-fit: cover;
+            background-color: 0;
+            cursor: pointer;
+        }
+
+        .contactLine button {
+            background-color: rgb(0, 127, 255);
+            border: 0;
+        }
+
+        .contactLine button:hover{
+            background-color: rgba(0, 0, 0, 0.20);
+        }
+
+        #footer {
+            color: white;
+            padding: 1rem 0;
+            margin-top: 32px;
+            background-color: rgb(0, 127, 255);
+            scroll-margin-top: var(--medium-size);
+        }
+
+        #toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #toast.show {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <img class="header-img" src="assets/images/eSign-white.png" alt="eSign">
-            <span class="header-text">Joven Christian D. Santos</span>
+    <div id="topNav">
+        <div class="navBtn">
+            <a href="#">Home</a>
         </div>
-        <img class="header-img" id="menu-btn" onclick="openHiddenMenu()" src="assets/images/menu-white.png" alt="menu">
-        <img class="header-img" id="menu-close-btn" onclick="closeHiddenMenu()" src="assets/images/close.png" alt="menu">
+        <div class="navBtn">
+            <a href="webDev">Web Development</a>
+        </div>
+        <div class="navBtn navBtn-fill">
+            <button onclick="window.open('assets/files/Joven_Santos_Resume.pdf', '_blank')">Resume</button>
+        </div>
+        <div class="navBtn navBtn-fill">
+            <button onclick="document.getElementById('footer').scrollIntoView({behavior: 'smooth'})">
+                Contact Me
+            </button>
+        </div>
     </div>
-    <div class="hero" id="heroDest">
-        <div class="heroText">
-            Passionate About Creating Web and Mobile Design
-            <br>
-            Ready to Learn and Grow.
-        </div>
-        <button id="cta" onclick="intoCta()">
-            See My Work
-            <img src="assets/images/down-arrow.png" alt="down arrow">
-        </button>
+
+    <div id="hero">
+        <span>Passionate About Creating Web Development, <br> Ready to Learn and Grow</span>
+        <a href="#webDevProjTop" id="cta"><strong>Browse Projects</strong></a>
     </div>
-    <div class="about" id="aboutDest">
-        <div class="aboutTitle title">
-            About Me
-        </div>
-        <div class="aboutText">
-            <p>Hello! I’m Joven Christian D. Santos, a fourth-year Bachelor of Science in Information Technology student at Laguna State Polytechnic University. I’m passionate about technology and eager to bring my skills in web and mobile application development to life. I have hands-on experience in HTML5, CSS3, JavaScript, PHP, and MySQL, and I’ve deployed and maintained web applications using platforms such as Heroku and Netlify.</p><br>
-            <p>I am highly motivated to continuously expand my technical knowledge while applying my problem-solving skills, adaptability, and collaborative mindset in real-world projects. Throughout my academic journey, I’ve developed a strong foundation in development practices, which I’m excited to further hone in professional settings.</p><br>
-            <p>With a genuine enthusiasm for learning and a proactive approach to challenges, I’m ready to contribute and make an impact in the field of technology. Let’s connect and build something amazing together!</p><br>
-        </div>
-        <button class="resume" onclick="openResume()">See my resume here</button>
+
+    <div id="profileTop">
+        <span>Junior Web Dev / QA Tester</span>
     </div>
-    <div class="portfolio" id="ctaDest">
-        <div class="portfolioTitle title">
-            My Works
+    <div id="profileBot">
+        <p>I'm Joven Christian D. Santos, a recent IT graduate with a focus on <strong>web development</strong> and a growing interest in <strong>software quality assurance and testing</strong>. I enjoy building clean, responsive websites and have a strong aptitude for the analytical and detail-oriented processes that ensure software is functional, user-friendly, and robust.</p>
+        <p>My technical skillset includes <strong>HTML, CSS, JavaScript, Python, and C#</strong>, which provides me with a solid foundation for understanding application development from the ground up. I'm also proficient with <strong>GitHub for version control and collaboration</strong>. I am keen to apply this technical knowledge to a QA role, with a focus on writing test cases, identifying bugs, and contributing to the delivery of high-quality software.</p>
+        <p>During my on-the-job training as a <strong>System Analyst</strong>, I developed a strong eye for detail by analyzing workflows, documenting system requirements, and proposing process improvements. This experience gave me valuable insight into the software development lifecycle and how clear communication between development, analysis, and testing teams is crucial for project success.</p>
+        <p>While I'm still shaping my career path, I'm open to opportunities in <strong>both web developer and QA tester</strong> — and I’m eager to grow as a developer through hands-on work, collaboration, and continuous learning.</p>
+    </div>
+    <div id="webDevSkillTop">
+        <span>Web Development Skills</span>
+    </div>
+    <div id="webDevSkillBot">
+        <!-- 
+        <div class="skillCard">
+            <img src="" alt="">
+            <span>Skill Name</span>
         </div>
-        <div class="projects">
-            <div class="project-card resume" onclick="openNewTab('works/countdown/index.html')">
-                <div class="cardImage"> <img src="assets/images/projectImages/newYearCountdown.png" alt=""></div>
-                <div>New Years Countdown</div>
+        -->
+    </div>
+
+    <div id="webDevProjTop">
+        <span>Web Development Projects</span>
+    </div>
+    <div id="webDevProjBot">
+        <!-- 
+        <a href="view/#">
+            <div class="projCard">
+                <img src="" alt="">
+                <span>Project Name</span>
             </div>
+        </a>
+        -->
+    </div>
+
+    <div class="allProj" id="allProjBtn">
+        <a href="webDev">View All Projects</a>
+    </div>
+
+    <div id="footer">
+        <div class="footerTitle">Contact Information</div>
+
+        <div class="contactLine">
+            <img src="assets/email.png" alt="">
+            <span>sjovencd@gmail.com</span>
+            <button><img src="assets/copy.png" alt=""></button>
+        </div>
+
+        <div class="contactLine">
+            <img src="assets/telephone.png" alt="">
+            <span>+63 929 343 0291</span>
+            <button><img src="assets/copy.png" alt=""></button>
         </div>
     </div>
-    <div class="footer" id="contactDest">
-        <div class="footerTitle">
-            Contact Me
-        </div>
-        <div class="footerText">
-            <div class="footerCard">
-                <img src="assets/images/email.png" alt="email-icon">
-                sjovencd@gmail.com
-            </div>
-            <div class="footerCard">
-                <img src="assets/images/telephone.png" alt="phone-icon">
-                0929 343 0291
-            </div>
-        </div>
-    </div>
-    <div class="menu">
-        <div class="menu-nav" id="hidden-menu">
-            <button onclick="intoHome()">Home</button>
-            <button onclick="intoAbout()">About Me</button>
-            <button onclick="intoCta()">Portfolio</button>
-            <button onclick="intoContact()">Contact Me</button>
-        </div>
-    </div>
-    <div class="resumePdf" id="resume-pdf">
-        <button class="closeResume" onclick="closeResume()"></button>
-        <iframe class="resumeMain" src="assets/others/Joven_Santos_Resume.pdf"></iframe>
-    </div>
-    <script src="assets/js/script.js"></script>
+
+    <div id="toast"></div>
+    <script>
+        const showToast = (message) => {
+            const toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.classList.add("show");
+
+            setTimeout(() => {
+            toast.classList.remove("show");
+            }, 3000);
+        };
+
+        document.querySelectorAll(".contactLine button").forEach(button => {
+            button.addEventListener("click", () => {
+            const textToCopy = button.parentElement.querySelector("span").innerText;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast(`Copied: ${textToCopy}`);
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+            });
+        });
+        function loadSkills(category, space) {
+            const container = document.getElementById(space);
+
+            fetch(`skills/${category}/data.json`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${category} skills`);
+                    }
+                    return response.json();
+                })
+                .then(skills => {
+                    container.innerHTML = '';
+                    skills.forEach(skill => {
+                        const skillCard = `
+                            <div class="skillCard">
+                                <img src="skills/${category}/${skill.photo}" alt="Icon for ${skill.name}">
+                                <span>${skill.name}</span>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', skillCard);
+                    });
+                })
+                .catch(error => {
+                    console.error(`Error loading ${category} skills:`, error);
+                    container.innerHTML = `<p>Error loading ${category} skills</p>`;
+                });
+        }
+
+        function loadProjects(category, space) {
+            const container = document.getElementById(space);
+            
+            fetch(`${category}/data.json`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+                })
+                .then(projects => {
+                const lastProjects = projects.slice(-6).reverse();
+                
+                lastProjects.forEach(project => {
+                    const projectCard = `
+                    <a href="${category}/view?id=${project.view}">
+                        <div class="projCard allProj">
+                        <img src="${category}/${project.photoMain}" alt="Image of ${project.title}">
+                        <span>${project.title}</span>
+                        </div>
+                    </a>
+                    `;
+                    container.insertAdjacentHTML('beforeend', projectCard);
+                });
+                })
+                .catch(error => {
+                console.error(`Error loading ${category} projects:`, error);
+                container.innerHTML = `<p>Failed to load ${category} projects. Please try again later.</p>`;
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProjects('webDev', 'webDevProjBot');
+            loadProjects('qualityAssurance', 'qaProjBot');
+            loadSkills('webDev', 'webDevSkillBot');
+            loadSkills('qa', 'qaSkillBot');
+        });
+    </script>
 </body>
 </html>
