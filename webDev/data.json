@@ -35,8 +35,25 @@
       "Intuitive Navigation",
       "Fast Loading Speed"
     ],
-    "tools": ["HTML", "CSS", "JavaScript", "JSON", "Github (for hosting)"],
+    "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "Github (for hosting)"],
     "description": "This portfolio is a deliberate demonstration of my strong foundation in core web principles. The vanilla JS architecture provides a fast and reliable experience, serving as a base for my explorations into modern frameworks.",
     "live": "../../"
+  },
+  {
+  "view": "002",
+  "title": "New Year Countdown",
+  "photoMain": "002/main.png",
+  "photoAll": [
+    "002/main.png",
+    "002/1.png"
+  ],
+  "features": [
+    "Dynamic Countdown Timer to New Year 2026",
+    "Automated Background Image Slideshow",
+    "Responsive and Minimalist Design"
+  ],
+  "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "GitHub (for hosting)"],
+  "description": "A lightweight yet engaging website featuring a live countdown to New Year 2026. Built with vanilla JavaScript, it dynamically updates the days, hours, minutes, and seconds while also cycling through background images. The project highlights fundamental web development skills in DOM manipulation, timing functions, and responsive UI design.",
+  "live": "../../others/countdown"
   }
 ]
