@@ -55,5 +55,30 @@
   "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "GitHub (for hosting)"],
   "description": "A lightweight yet engaging website featuring a live countdown to New Year 2026. Built with vanilla JavaScript, it dynamically updates the days, hours, minutes, and seconds while also cycling through background images. The project highlights fundamental web development skills in DOM manipulation, timing functions, and responsive UI design.",
   "live": "../../others/countdown"
+  },
+  {
+    "view": "003",
+    "title": "Weather Tracker App",
+    "photoMain": "003/main.png",
+    "photoAll": [
+      "003/main.png",
+      "003/1.png"
+    ],
+    "features": [
+      "Displays live weather data: temperature, humidity, wind, description",
+      "City search with error handling",
+      "Stores recent searches using localStorage",
+      "Responsive, mobile-friendly UI design"
+    ],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "OpenWeatherMap API",
+      "LocalStorage",
+      "Playwright (for future testing)"
+    ],
+    "description": "A responsive weather app that fetches and displays real-time weather data from the OpenWeatherMap API. Users can search for cities, view key weather metrics, and quickly access recent searches. The UI is clean, structured, and maintainable, designed with future automated Playwright testing in mind.",
+    "live": "https://sjoven.github.io/weather-tracker-app/"
   }
 ]
