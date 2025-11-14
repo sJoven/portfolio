@@ -47,17 +47,16 @@
             padding: 0;
             margin-bottom: 8px;
             border-radius: 4px;
+            background-color: black; /* Added black background for letterboxing/pillarboxing */
 
             position: relative;
+            aspect-ratio: 16 / 9; /* Added to maintain 16:9 container aspect ratio */
         }
 
         #carousel img{
             width: 100%;
-
-            
-            
-            object-fit: cover;
-            aspect-ratio: 16 / 9;
+            height: 100%; /* Changed to 100% to fill container */
+            object-fit: contain; /* Changed to contain for centering with black bars */
         }
 
         #carousel button {
