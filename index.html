@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/topnav.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <title>Joven Christian D. Santos</title>
     <style>
+        body {
+            padding-bottom: 2rem;
+        }
         #hero {
             height: 100vh;
             position: relative; 
@@ -217,45 +221,6 @@
             object-fit: cover;
         }
 
-        .footerTitle {
-            margin: 0 24px 4px;
-
-            font-size: 20px;
-        }
-
-        .contactLine {
-            margin: 0 24px 0px;
-
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-        .contactLine img {
-            height: 24px;
-            width: 24px;
-
-            object-fit: cover;
-            background-color: 0;
-            cursor: pointer;
-        }
-
-        .contactLine button {
-            background-color: rgb(0, 127, 255);
-            border: 0;
-        }
-
-        .contactLine button:hover{
-            background-color: rgba(0, 0, 0, 0.20);
-        }
-
-        #footer {
-            color: white;
-            padding: 1rem 0;
-            margin-top: 32px;
-            background-color: rgb(0, 127, 255);
-            scroll-margin-top: var(--medium-size);
-        }
-
         #toast {
             position: fixed;
             bottom: 20px;
@@ -288,9 +253,7 @@
             <button onclick="window.open('assets/files/Joven_Santos_Resume.pdf', '_blank')">Resume</button>
         </div>
         <div class="navBtn navBtn-fill">
-            <button onclick="document.getElementById('footer').scrollIntoView({behavior: 'smooth'})">
-                Contact Me
-            </button>
+            <button onclick="openContactModal()">Contact Me</button>
         </div>
     </div>
 
@@ -338,23 +301,30 @@
         <a href="webDev">View All Projects</a>
     </div>
 
-    <div id="footer">
-        <div class="footerTitle">Contact Information</div>
+    <div id="blackOverlay">
+        <div id="contactModal">
+            <span class="contactTitle">Contact Information</span>
 
-        <div class="contactLine">
-            <img src="assets/email.png" alt="">
-            <span>sjovencd@gmail.com</span>
-            <button><img src="assets/copy.png" alt=""></button>
-        </div>
+            <div class="contactLine">
+                <img src="../assets/email.png" alt="">
+                <span>sjovencd@gmail.com</span>
+                <button onclick="copyToClipboard(this)"><img src="../assets/copy.png" alt=""></button>
+            </div>
 
-        <div class="contactLine">
-            <img src="assets/telephone.png" alt="">
-            <span>+63 929 343 0291</span>
-            <button><img src="assets/copy.png" alt=""></button>
+            <div class="contactLine">
+                <img src="../assets/telephone.png" alt="">
+                <span>+63 929 343 0291</span>
+                <button onclick="copyToClipboard(this)"><img src="../assets/copy.png" alt=""></button>
+            </div>
+
+            <button class="closeBtn" onclick="document.getElementById('blackOverlay').style.display='none'">
+                Close
+            </button>
         </div>
     </div>
 
     <div id="toast"></div>
+    <script src="scipts/contact.js"></script>
     <script>
         const showToast = (message) => {
             const toast = document.getElementById("toast");
@@ -438,9 +408,7 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             loadProjects('webDev', 'webDevProjBot');
-            loadProjects('qualityAssurance', 'qaProjBot');
             loadSkills('webDev', 'webDevSkillBot');
-            loadSkills('qa', 'qaSkillBot');
         });
     </script>
 </body>
