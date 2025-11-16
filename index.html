@@ -90,18 +90,18 @@
             margin: 0 24px 8px;
         }
 
-        #webDevSkillTop {
+        #skillTop {
             margin: 0 24px 24px;
 
             font-size: 20px;
 
         }
 
-        #webDevSkillTop span {
+        #skillTop span {
             border-bottom: 2px solid rgb(0, 127, 255);
         }
 
-        #webDevSkillBot {
+        #skillBot {
             margin: 0 24px 8px;
 
             display: flex;
@@ -126,18 +126,18 @@
 
         }
 
-        #webDevProjTop {
+        #projTop {
             margin: 0 24px 24px;
 
             font-size: 20px;
             
         }
 
-        #webDevProjTop span {
+        #projTop span {
             border-bottom: 2px solid rgb(0, 127, 255);
         }
 
-        #webDevProjBot {
+        #projBot {
             margin: 0 24px 8px;
 
             display: flex;
@@ -247,7 +247,7 @@
             <a href="#">Home</a>
         </div>
         <div class="navBtn">
-            <a href="webDev">Web Development</a>
+            <a href="projects/">Projects</a>
         </div>
         <div class="navBtn navBtn-fill">
             <button onclick="window.open('assets/files/Joven_Santos_Resume.pdf', '_blank')">Resume</button>
@@ -259,7 +259,7 @@
 
     <div id="hero">
         <span>Passionate About Creating Web Development, <br> Ready to Learn and Grow</span>
-        <a href="#webDevProjTop" id="cta"><strong>Browse Projects</strong></a>
+        <a href="#projTop" id="cta"><strong>Browse Projects</strong></a>
     </div>
 
     <div id="profileTop">
@@ -271,10 +271,10 @@
         <p>During my on-the-job training as a <strong>System Analyst</strong>, I developed a strong eye for detail by analyzing workflows, documenting system requirements, and proposing process improvements. This experience gave me valuable insight into the software development lifecycle and how clear communication between development, analysis, and testing teams is crucial for project success.</p>
         <p>While I'm still shaping my career path, I'm open to opportunities in <strong>both web developer and QA tester</strong> — and I’m eager to grow as a developer through hands-on work, collaboration, and continuous learning.</p>
     </div>
-    <div id="webDevSkillTop">
+    <div id="skillTop">
         <span>Web Development Skills</span>
     </div>
-    <div id="webDevSkillBot">
+    <div id="skillBot">
         <!-- 
         <div class="skillCard">
             <img src="" alt="">
@@ -283,10 +283,10 @@
         -->
     </div>
 
-    <div id="webDevProjTop">
+    <div id="projTop">
         <span>Web Development Projects</span>
     </div>
-    <div id="webDevProjBot">
+    <div id="projBot">
         <!-- 
         <a href="view/#">
             <div class="projCard">
@@ -298,7 +298,7 @@
     </div>
 
     <div class="allProj" id="allProjBtn">
-        <a href="webDev">View All Projects</a>
+        <a href="projects/">View All Projects</a>
     </div>
 
     <div id="blackOverlay">
@@ -326,16 +326,6 @@
     <div id="toast"></div>
     <script src="scipts/contact.js"></script>
     <script>
-        const showToast = (message) => {
-            const toast = document.getElementById("toast");
-            toast.textContent = message;
-            toast.classList.add("show");
-
-            setTimeout(() => {
-            toast.classList.remove("show");
-            }, 3000);
-        };
-
         document.querySelectorAll(".contactLine button").forEach(button => {
             button.addEventListener("click", () => {
             const textToCopy = button.parentElement.querySelector("span").innerText;
@@ -347,13 +337,13 @@
             });
             });
         });
-        function loadSkills(category, space) {
+        function loadSkills(space) {
             const container = document.getElementById(space);
 
-            fetch(`skills/${category}/data.json`)
+            fetch(`skills/data.json`)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error(`Failed to load ${category} skills`);
+                        throw new Error(`Failed to load skills`);
                     }
                     return response.json();
                 })
@@ -362,7 +352,7 @@
                     skills.forEach(skill => {
                         const skillCard = `
                             <div class="skillCard">
-                                <img src="skills/${category}/${skill.photo}" alt="Icon for ${skill.name}">
+                                <img src="skills/${skill.photo}" alt="Icon for ${skill.name}">
                                 <span>${skill.name}</span>
                             </div>
                         `;
@@ -370,15 +360,15 @@
                     });
                 })
                 .catch(error => {
-                    console.error(`Error loading ${category} skills:`, error);
-                    container.innerHTML = `<p>Error loading ${category} skills</p>`;
+                    console.error(`Error loading skills:`, error);
+                    container.innerHTML = `<p>Error loading skills</p>`;
                 });
         }
 
-        function loadProjects(category, space) {
+        function loadProjects(space) {
             const container = document.getElementById(space);
             
-            fetch(`${category}/data.json`)
+            fetch(`projects/data.json`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -390,9 +380,9 @@
                 
                 lastProjects.forEach(project => {
                     const projectCard = `
-                    <a href="${category}/view?id=${project.view}">
+                    <a href="projects/view?id=${project.view}">
                         <div class="projCard allProj">
-                        <img src="${category}/${project.photoMain}" alt="Image of ${project.title}">
+                        <img src="projects/${project.photoMain}" alt="Image of ${project.title}">
                         <span>${project.title}</span>
                         </div>
                     </a>
@@ -401,14 +391,14 @@
                 });
                 })
                 .catch(error => {
-                console.error(`Error loading ${category} projects:`, error);
-                container.innerHTML = `<p>Failed to load ${category} projects. Please try again later.</p>`;
+                console.error(`Error loading projects:`, error);
+                container.innerHTML = `<p>Failed to load projects. Please try again later.</p>`;
                 });
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            loadProjects('webDev', 'webDevProjBot');
-            loadSkills('webDev', 'webDevSkillBot');
+            loadProjects('projBot');
+            loadSkills('skillBot');
         });
     </script>
 </body>
