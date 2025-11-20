@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="styles/contact.css">
     <title>Joven Christian D. Santos</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             padding-bottom: 2rem;
         }
@@ -90,50 +93,53 @@
             margin: 0 24px 8px;
         }
 
-        #skillTop {
-            margin: 0 24px 24px;
-
-            font-size: 20px;
-
-        }
-
-        #skillTop span {
-            border-bottom: 2px solid rgb(0, 127, 255);
-        }
-
-        #skillBot {
+        #skillBot{
             margin: 0 24px 8px;
-
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-            
         }
 
-        .skillCard {
-            display: flex;
-
-            flex-direction: column;
-            align-items: center;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: rgb(54, 69, 79);
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: rgb(54, 69, 79);
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills-list li {
+            margin-bottom: 5px;
+        }
+        .proficiency {
+            font-size: 1.2em;
         }
 
-        .skillCard img {
-            width: 240px;
-            height: 135px;
-            object-fit: contain;
-            object-position: center;
-
-        }
-
-        #projTop {
+        #projTop, #skillTop {
             margin: 0 24px 24px;
 
             font-size: 20px;
             
         }
 
-        #projTop span {
+        #projTop span, #skillTop span{
             border-bottom: 2px solid rgb(0, 127, 255);
         }
 
@@ -258,33 +264,123 @@
     </div>
 
     <div id="hero">
-        <span>Passionate About Creating Web Development, <br> Ready to Learn and Grow</span>
+        <span>Strive for Progress, <br>Not Perfection</span>
         <a href="#projTop" id="cta"><strong>Browse Projects</strong></a>
     </div>
 
     <div id="profileTop">
-        <span>Junior Web Dev / QA Tester</span>
+        <span>Quality Assurance Analyst</span>
     </div>
     <div id="profileBot">
-        <p>I'm Joven Christian D. Santos, a recent IT graduate with a focus on <strong>web development</strong> and a growing interest in <strong>software quality assurance and testing</strong>. I enjoy building clean, responsive websites and have a strong aptitude for the analytical and detail-oriented processes that ensure software is functional, user-friendly, and robust.</p>
-        <p>My technical skillset includes <strong>HTML, CSS, JavaScript, Python, and C#</strong>, which provides me with a solid foundation for understanding application development from the ground up. I'm also proficient with <strong>GitHub for version control and collaboration</strong>. I am keen to apply this technical knowledge to a QA role, with a focus on writing test cases, identifying bugs, and contributing to the delivery of high-quality software.</p>
-        <p>During my on-the-job training as a <strong>System Analyst</strong>, I developed a strong eye for detail by analyzing workflows, documenting system requirements, and proposing process improvements. This experience gave me valuable insight into the software development lifecycle and how clear communication between development, analysis, and testing teams is crucial for project success.</p>
-        <p>While I'm still shaping my career path, I'm open to opportunities in <strong>both web developer and QA tester</strong> — and I’m eager to grow as a developer through hands-on work, collaboration, and continuous learning.</p>
+        <p>Hi! I’m <strong>Joven Christian D. Santos</strong>, a <strong>Quality Assurance Analyst</strong> focused on helping web applications function smoothly and consistently. I approach systems by understanding how they’re built, analyzing how they behave, and ensuring that each feature meets its intended requirements. My background in <strong>web development</strong> supports my ability to evaluate functionality, user flows, and overall usability.</p>
+        <p>During my internship at <strong>Pixel8 Web Solutions & Consultancy Inc.</strong>, I worked on <strong>documentation</strong>, <strong>user flows</strong>, <strong>UI mockups</strong>, and early <strong>QA validations</strong> for several internal systems. This experience strengthened my ability to analyze modules, create organized references for teams, and support clear, structured project workflows.</p>
+        <p>I maintain and expand my expertise through personal projects, applying <strong>test automation</strong> with <strong>Playwright</strong> and <strong>API testing</strong> with <strong>Postman</strong>. This ongoing practice supports a consistent and reliable foundation in <strong>software quality assurance</strong>.</p>
     </div>
+
     <div id="skillTop">
-        <span>Web Development Skills</span>
+        <span>Skills</span>
     </div>
     <div id="skillBot">
-        <!-- 
-        <div class="skillCard">
-            <img src="" alt="">
-            <span>Skill Name</span>
-        </div>
-        -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Skills</th>
+                    <th>Proficiency Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Quality Assurance (QA) Core</td>
+                    <td>
+                        <ul class="skills-list">
+                            <li>Manual Testing</li>
+                            <li>Regression Testing</li>
+                            <li>Exploratory Testing</li>
+                            <li>Test Case Design</li>
+                            <li>Defect Reporting</li>
+                            <li>Software Quality Assurance</li>
+                            <li>STLC</li>
+                            <li>SDLC</li>
+                            <li>Software System Analysis</li>
+                        </ul>
+                    </td>
+                    <td class="proficiency">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>QA Tools & Automation</td>
+                    <td>
+                        <ul class="skills-list">
+                            <li>Postman API</li>
+                            <li>API Testing</li>
+                            <li>Chrome DevTools</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>SQL</li>
+                            <li>Continuous Integration (CI)</li>
+                            <li>Test Automation</li>
+                        </ul>
+                    </td>
+                    <td class="proficiency">⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>QA Automation Frameworks</td>
+                    <td>Playwright</td>
+                    <td class="proficiency">⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>Web Development Core</td>
+                    <td>
+                        <ul class="skills-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Responsive Web Design</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </td>
+                    <td class="proficiency">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>Backend & Scripting</td>
+                    <td>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>PHP</li>
+                        </ul>
+                    </td>
+                    <td class="proficiency">⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>Design & Analysis</td>
+                    <td>
+                        <ul class="skills-list">
+                            <li>UI/UX</li>
+                            <li>Web Design</li>
+                            <li>User Interface Design</li>
+                            <li>User Experience (UX)</li>
+                            <li>Figma</li>
+                            <li>Technical Documentation</li>
+                        </ul>
+                    </td>
+                    <td class="proficiency">⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>Languages</td>
+                    <td>
+                        <ul class="skills-list">
+                            <li>English</li>
+                            <li>Tagalog</li>
+                        </ul>
+                    </td>
+                    <td class="proficiency">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <div id="projTop">
-        <span>Web Development Projects</span>
+        <span>Personal Projects</span>
     </div>
     <div id="projBot">
         <!-- 
@@ -337,33 +433,6 @@
             });
             });
         });
-        function loadSkills(space) {
-            const container = document.getElementById(space);
-
-            fetch(`skills/data.json`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Failed to load skills`);
-                    }
-                    return response.json();
-                })
-                .then(skills => {
-                    container.innerHTML = '';
-                    skills.forEach(skill => {
-                        const skillCard = `
-                            <div class="skillCard">
-                                <img src="skills/${skill.photo}" alt="Icon for ${skill.name}">
-                                <span>${skill.name}</span>
-                            </div>
-                        `;
-                        container.insertAdjacentHTML('beforeend', skillCard);
-                    });
-                })
-                .catch(error => {
-                    console.error(`Error loading skills:`, error);
-                    container.innerHTML = `<p>Error loading skills</p>`;
-                });
-        }
 
         function loadProjects(space) {
             const container = document.getElementById(space);
@@ -380,7 +449,7 @@
                 
                 lastProjects.forEach(project => {
                     const projectCard = `
-                    <a href="projects/view?id=${project.view}">
+                    <a href="projects/${project.view}">
                         <div class="projCard allProj">
                         <img src="projects/${project.photoMain}" alt="Image of ${project.title}">
                         <span>${project.title}</span>
@@ -398,7 +467,6 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             loadProjects('projBot');
-            loadSkills('skillBot');
         });
     </script>
 </body>

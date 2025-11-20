@@ -1,84 +1,17 @@
 [
   {
-    "view": "000",
-    "title": "Sample (no data)",
-    "photoMain": "none",
-    "photoAll": [
-    "none",
-    "none",
-    "none",
-    "none"
-  ],
-    "features": [
-      "-",
-      "-",
-      "-"
-    ],
-    "tools": ["-", "-", "-"],
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt adipisci dolorum accusantium praesentium a doloremque velit, similique temporibus rerum magnam nulla. Quo distinctio ullam odit exercitationem ipsa voluptates qui accusantium.",
-    "live": "../"
-  },
-  {
     "view": "001",
-    "title": "Portfolio",
-    "photoMain": "001/main.png",
-    "photoAll": [
-      "001/main.png",
-      "001/1.png",
-      "001/2.png",
-      "001/3.png",
-      "001/4.png",
-      "001/5.png"
-    ],
-    "features": [
-      "Modern Aesthetic",
-      "Intuitive Navigation",
-      "Fast Loading Speed"
-    ],
-    "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "Github (for hosting)"],
-    "description": "This portfolio is a deliberate demonstration of my strong foundation in core web principles. The vanilla JS architecture provides a fast and reliable experience, serving as a base for my explorations into modern frameworks.",
-    "live": "../../"
+    "title": "Exploratory Testing Case Study: Weather Tracker App",
+    "photoMain": "001/main.png"
   },
   {
-  "view": "002",
-  "title": "New Year Countdown",
-  "photoMain": "002/main.png",
-  "photoAll": [
-    "002/main.png",
-    "002/1.png"
-  ],
-  "features": [
-    "Dynamic Countdown Timer to New Year 2026",
-    "Automated Background Image Slideshow",
-    "Responsive and Minimalist Design"
-  ],
-  "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "GitHub (for hosting)"],
-  "description": "A lightweight yet engaging website featuring a live countdown to New Year 2026. Built with vanilla JavaScript, it dynamically updates the days, hours, minutes, and seconds while also cycling through background images. The project highlights fundamental web development skills in DOM manipulation, timing functions, and responsive UI design.",
-  "live": "../../others/countdown"
+    "view": "002",
+    "title": "New Year Countdown",
+    "photoMain": "002/main.png"
   },
   {
     "view": "003",
     "title": "Weather Tracker App",
-    "photoMain": "003/main.png",
-    "photoAll": [
-      "003/main.png",
-      "003/1.png"
-    ],
-    "features": [
-      "Displays live weather data: temperature, humidity, wind, description",
-      "City search with error handling",
-      "Stores recent searches using localStorage",
-      "Responsive, mobile-friendly UI design"
-    ],
-    "tools": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "OpenWeatherMap API",
-      "LocalStorage",
-      "Playwright (for future testing)"
-    ],
-    "description": "A responsive weather app that fetches and displays real-time weather data from the OpenWeatherMap API. Users can search for cities, view key weather metrics, and quickly access recent searches. The UI is clean, structured, and maintainable, designed with future automated Playwright testing in mind.",
-    "live": "https://sjoven.github.io/weather-tracker-app/"
+    "photoMain": "003/main.png"
   }
 ]

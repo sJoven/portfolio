@@ -96,6 +96,7 @@
 
         .projCard span {
             text-decoration: none;
+            text-align: center;
         }
 
         .projCard img {
@@ -231,7 +232,7 @@
         pageProjects.forEach(project => {
             const projectCard = `
             <div class="projCont"> <!-- Unique container for each project -->
-                <a href="view?id=${project.view}">
+                <a href="${project.view}">
                 <div class="projCard allProj">
                     <img src="${project.photoMain}" alt="${project.title}">
                     <span>${project.title}</span>
