@@ -6,12 +6,12 @@
   },
   {
     "view": "002",
-    "title": "New Year Countdown",
+    "title": "Test Automation Case Study: Weather Tracker App (Playwright E2E)",
     "photoMain": "002/main.png"
   },
   {
     "view": "003",
-    "title": "Weather Tracker App",
+    "title": "API Automation Case Study: OpenWeatherMap Integration",
     "photoMain": "003/main.png"
   }
 ]
